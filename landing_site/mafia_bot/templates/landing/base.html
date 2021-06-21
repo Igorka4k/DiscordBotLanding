@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" rel="stylesheet" href="static/mafia_bot/css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'mafia_bot/css/styles.css' %}">
+    <!-- There are two methods styles connect above but last is more better (with static user-tag) -->
+</head>
+<body>
+<header class="header row">
+    <div class="logo">
+        <a href="{% url 'main_sample' %}"><img height="50" width="100" src="{% static 'mafia_bot/images/logo1.png' %}" alt="god-father-logo"></a>
+    </div>
+    <div class="nav">
+        <ul class="header-menu">
+            {% for m in menu %}
+            <li><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+</html>
