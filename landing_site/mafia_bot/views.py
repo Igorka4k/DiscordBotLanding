@@ -7,15 +7,18 @@ menu = [{"title": "Главная", "url_name": "main_sample"},
 
 
 def main_sample(request):
-    return render(request, "landing/main_sample.html", context={"menu": menu, "title": "один"})
+    context = {"menu": menu, "title": "один", "modes": ["common", "extreme", "special", "random"]}
+    return render(request, "mafia_bot/main_sample.html", context=context)
 
 
 def second(request):
-    return render(request, "landing/second.html", context={"menu": menu, "title": "два"})
+    context = {"menu": menu, "title": "два"}
+    return render(request, "mafia_bot/second.html", context=context)
 
 
 def third(request):
-    return render(request, "landing/third.html", context={"menu": menu, "title": "три"})
+    context = {"menu": menu, "title": "три"}
+    return render(request, "mafia_bot/third.html", context=context)
 
 
 def pageNotFound(request, exception):

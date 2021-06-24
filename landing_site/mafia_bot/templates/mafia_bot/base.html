@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <link type="text/css" rel="stylesheet" href="static/mafia_bot/css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'mafia_bot/css/normalize.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'mafia_bot/css/styles.css' %}">
-    <!-- There are two methods styles connect above but last is more better (with static user-tag) -->
+    <!-- CONNECT ONLY WITH USER-TAG1!! (without direct link like static/mafia_bot/css/styles.css) -->
 </head>
 <body>
 <header class="header row">

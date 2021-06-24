@@ -21,6 +21,13 @@ body {
     background-color: #36393F;
 }
 
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
 .header-menu li{
     margin-left: 50px;
 }
@@ -40,26 +47,66 @@ body {
 }
 
 .header-menu {
+    display: flex;
+    justify-content: center;
     align-items: center;
     list-style: none;
-    display: flex;
     margin: 0 auto;
 }
 
 .logo {
     background-color: white;
     float: left;
-    width: 7.8%;
+    width: 5.4%;
     height:50px;
 }
 
 .nav {
     float: left;
-    width: 92.2%;
+    width:94.2%;
     height: 50px;
     background-color: #202225;
 }
 
 .header {
     margin-top: 20px;
+}
+
+.modes {
+    padding: 1em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows:120px 120px;
+    grid-row-gap: 100px;
+    grid-column-gap: 50px;
+    margin: 100px 10px 10px 10px;
+    border: 2px solid red;
+}
+
+.mode {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    transition-property: box-shadow;
+    transition-duration: .3s;
+    border: 1px solid #202225;
+    border-radius: 15px;
+}
+
+.mode:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 10px #5865F2;
+    box-shadow: 0px 0px 10px #5865F2;
+}
+
+.mode > a {
+    paddint-top: 25px;
+    font-size: 25pt;
+    color: white;
+}
+
+.mode-link:hover{
+    text-shadow: 0px 0px 10px #5865F2;
 }
